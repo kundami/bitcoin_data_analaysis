@@ -1,0 +1,42 @@
+Country,Codes,Avg_Trade_per_min,Exchange_count
+United Arab Emirates,ARE,0.01,1.0
+Argentina,ARG,0.02,1.0
+Australia,AUS,0.5,2.0
+Brazil,BRA,0.86,2.0
+Canada,CAN,0.22333333333333336,6.0
+Switzerland,CHE,0.01,1.0
+Chile,CHL,0.02,1.0
+China,CHN,1.9,5.0
+Colombia,COL,0.06,1.0
+Czech Republic,CZE,0.01,1.0
+Denmark,DNK,0.01,1.0
+European Union,,1.7157894736842105,19.0
+United Kingdom,GBR,1.0700000000000003,5.0
+Hong Kong,HKG,0.09000000000000001,2.0
+Croatia,HRV,0.01,1.0
+Hungary,HUN,0.0,1.0
+Indonesia,IDN,4.87,1.0
+Israel,ISR,0.02,1.0
+India,IND,0.15,1.0
+Iran,IRN,0.01,1.0
+Japan,JPN,8.16,3.0
+Kenya,KEN,0.1,1.0
+Mexico,MEX,0.74,2.0
+Malaysia,MYS,0.05,1.0
+Norway,NOR,0.015,2.0
+New Zealand,NZL,0.04,1.0
+Philippines,PHL,0.005,2.0
+Pakistan,PAK,0.05,1.0
+Poland,POL,0.528,5.0
+Romania,ROU,0.02,1.0
+Russia,RUS,3.1399999999999997,2.0
+Russia,RUS,0.97,1.0
+Saudi Arabia,SAU,0.01,1.0
+Sweden,SWE,0.15,1.0
+Singapore,SGP,0.034999999999999996,2.0
+Thailand,THA,0.04,1.0
+Turkey,TUR,0.01,1.0
+Ukraine,UKR,0.265,2.0
+United States,USA,3.04,23.0
+Venezuela,VEN,0.55,1.0
+South Africa,ZAF,0.14,1.0
