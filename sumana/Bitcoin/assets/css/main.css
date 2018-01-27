@@ -2817,3 +2817,16 @@ body.is-menu-visible #menu {
   transform: translateX(0);
   box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
   visibility: visible; }
+
+.map {
+  height: 100%;
+}
+
+.water {
+    fill: #0000ff;
+}
+
+.land {
+  fill: #d9b38c;
+  stroke: #31322D;
+  stroke-width: 0.7px;
