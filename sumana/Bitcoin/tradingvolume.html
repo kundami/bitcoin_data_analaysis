@@ -19,7 +19,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/d3.v4.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v1.3.1/leaflet.css" />
@@ -69,14 +69,20 @@
 					</div>
 		<!-- Bargraph plotting -->
 
+			<div class="content">
+				<select id="selectData" onchange='getFactor(this.value,true)' style="width: 180px;">
+						<option value='count' selected>Exchange count</option>
+						<option value='volume' >Trade Volume</option>
+						<option value='trade' >Trade per min</option>
+				</select>
+
 					<div class="content">
-
-						<div id='bar'>
-
-						</div>
+							<div id='bar'></div>
 					</div>
-				</div>
-			</section>
+			
+			</div>
+		</div>
+		</section>
 
 
 		<!-- Footer -->
@@ -93,10 +99,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!-- <script type='text/javascript' src='assets/data/d3file.json'></script>  -->
-			<script type='text/javascript' src='assets/data/volumetrade_geo.json'></script>
+			<script type='text/javascript' src='assets/data/volumetrade_geoeuro.json'></script>
+			<script type='text/javascript' src='assets/data/avgtrade_geoeuro.json'></script>
       		<script type='text/javascript' src='assets/data/volume.json'></script>
-	      	<script type='text/javascript' src='assets/data/avgtrade_geo.json'></script>
+			<!-- <script type='text/javascript' src='assets/data/avgtrade_geo.json'></script>  -->
 			<script type='text/javascript' src='assets/data/trade.json'></script> 
 			<script type='text/javascript' src='assets/js/map.js'></script>
 			<script type='text/javascript' src='assets/js/bargraph.js'></script>
