@@ -1,0 +1,402 @@
+trade = [
+   {
+      "Country":"United Arab Emirates",
+      "Codes":"ARE",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"AE",
+      "Latitude":23.424076,
+      "Longitude":53.847818,
+      "Currency":"UAE dirham"
+   },
+   {
+      "Country":"Argentina",
+      "Codes":"ARG",
+      "Avg_Trade_per_min":0.02,
+      "Exchange_count":1,
+      "0":"AR",
+      "Latitude":-38.416097,
+      "Longitude":-63.616672,
+      "Currency":"Argentine peso"
+   },
+   {
+      "Country":"Australia",
+      "Codes":"AUS",
+      "Avg_Trade_per_min":0.505,
+      "Exchange_count":2,
+      "0":"AU",
+      "Latitude":-25.274398,
+      "Longitude":133.775136,
+      "Currency":"Australian dollar"
+   },
+   {
+      "Country":"Brazil",
+      "Codes":"BRA",
+      "Avg_Trade_per_min":0.87,
+      "Exchange_count":2,
+      "0":"BR",
+      "Latitude":-14.235004,
+      "Longitude":-51.92528,
+      "Currency":"Brazilian real"
+   },
+   {
+      "Country":"Canada",
+      "Codes":"CAN",
+      "Avg_Trade_per_min":0.226666667,
+      "Exchange_count":6,
+      "0":"CA",
+      "Latitude":56.130366,
+      "Longitude":-106.346771,
+      "Currency":"Canadian dollar"
+   },
+   {
+      "Country":"Switzerland",
+      "Codes":"CHE",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"CH",
+      "Latitude":46.818188,
+      "Longitude":8.227512,
+      "Currency":"Swiss franc"
+   },
+   {
+      "Country":"Chile",
+      "Codes":"CHL",
+      "Avg_Trade_per_min":0.02,
+      "Exchange_count":1,
+      "0":"CL",
+      "Latitude":-35.675147,
+      "Longitude":-71.542969,
+      "Currency":"Chilean peso"
+   },
+   {
+      "Country":"China",
+      "Codes":"CHN",
+      "Avg_Trade_per_min":1.9,
+      "Exchange_count":5,
+      "0":"CN",
+      "Latitude":35.86166,
+      "Longitude":104.195397,
+      "Currency":"Chinese Yuan Renminbi"
+   },
+   {
+      "Country":"Colombia",
+      "Codes":"COL",
+      "Avg_Trade_per_min":0.06,
+      "Exchange_count":1,
+      "0":"CO",
+      "Latitude":4.570868,
+      "Longitude":-74.297333,
+      "Currency":"Colombian peso"
+   },
+   {
+      "Country":"Czech Republic",
+      "Codes":"CZE",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"CZ",
+      "Latitude":49.817492,
+      "Longitude":15.472962,
+      "Currency":"Czech koruna"
+   },
+   {
+      "Country":"Denmark",
+      "Codes":"DNK",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"DK",
+      "Latitude":56.26392,
+      "Longitude":9.501785,
+      "Currency":"Danish krone"
+   },
+   {
+      "Country":"European Union",
+      "Codes":"BEL",
+      "Avg_Trade_per_min":1.739473684,
+      "Exchange_count":19,
+      "0":null,
+      "Latitude":50.503887,
+      "Longitude":4.469936,
+      "Currency":"Euro"
+   },
+   {
+      "Country":"United Kingdom",
+      "Codes":"GBR",
+      "Avg_Trade_per_min":1.076,
+      "Exchange_count":5,
+      "0":"GB",
+      "Latitude":55.378051,
+      "Longitude":-3.435973,
+      "Currency":"Pound sterling"
+   },
+   {
+      "Country":"Hong Kong",
+      "Codes":"HKG",
+      "Avg_Trade_per_min":0.085,
+      "Exchange_count":2,
+      "0":"HK",
+      "Latitude":22.396428,
+      "Longitude":114.109497,
+      "Currency":"Hong Kong Dollar"
+   },
+   {
+      "Country":"Croatia",
+      "Codes":"HRV",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"HR",
+      "Latitude":45.1,
+      "Longitude":15.2,
+      "Currency":"Croatian kuna"
+   },
+   {
+      "Country":"Hungary",
+      "Codes":"HUN",
+      "Avg_Trade_per_min":0.0,
+      "Exchange_count":1,
+      "0":"HU",
+      "Latitude":47.162494,
+      "Longitude":19.503304,
+      "Currency":"Hungarian forint"
+   },
+   {
+      "Country":"Indonesia",
+      "Codes":"IDN",
+      "Avg_Trade_per_min":4.93,
+      "Exchange_count":1,
+      "0":"ID",
+      "Latitude":-0.789275,
+      "Longitude":113.921327,
+      "Currency":"Indonesian rupiah"
+   },
+   {
+      "Country":"Israel",
+      "Codes":"ISR",
+      "Avg_Trade_per_min":0.02,
+      "Exchange_count":1,
+      "0":"IL",
+      "Latitude":31.046051,
+      "Longitude":34.851612,
+      "Currency":"Israeli new shekel"
+   },
+   {
+      "Country":"India",
+      "Codes":"IND",
+      "Avg_Trade_per_min":0.15,
+      "Exchange_count":1,
+      "0":"IN",
+      "Latitude":20.593684,
+      "Longitude":78.96288,
+      "Currency":"Indian rupee"
+   },
+   {
+      "Country":"Iran",
+      "Codes":"IRN",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"IR",
+      "Latitude":32.427908,
+      "Longitude":53.688046,
+      "Currency":"Iranian rial"
+   },
+   {
+      "Country":"Japan",
+      "Codes":"JPN",
+      "Avg_Trade_per_min":8.3,
+      "Exchange_count":3,
+      "0":"JP",
+      "Latitude":36.204824,
+      "Longitude":138.252924,
+      "Currency":"Japanese yen"
+   },
+   {
+      "Country":"Kenya",
+      "Codes":"KEN",
+      "Avg_Trade_per_min":0.1,
+      "Exchange_count":1,
+      "0":"KE",
+      "Latitude":-0.023559,
+      "Longitude":37.906193,
+      "Currency":"Kenyan shilling"
+   },
+   {
+      "Country":"Mexico",
+      "Codes":"MEX",
+      "Avg_Trade_per_min":0.75,
+      "Exchange_count":2,
+      "0":"MX",
+      "Latitude":23.634501,
+      "Longitude":-102.552784,
+      "Currency":"Mexican peso"
+   },
+   {
+      "Country":"Malaysia",
+      "Codes":"MYS",
+      "Avg_Trade_per_min":0.05,
+      "Exchange_count":1,
+      "0":"MY",
+      "Latitude":4.210484,
+      "Longitude":101.975766,
+      "Currency":"Malaysian ringgit"
+   },
+   {
+      "Country":"Norway",
+      "Codes":"NOR",
+      "Avg_Trade_per_min":0.015,
+      "Exchange_count":2,
+      "0":"NO",
+      "Latitude":60.472024,
+      "Longitude":8.468946,
+      "Currency":"Norwegian krone"
+   },
+   {
+      "Country":"New Zealand",
+      "Codes":"NZL",
+      "Avg_Trade_per_min":0.04,
+      "Exchange_count":1,
+      "0":"NZ",
+      "Latitude":-40.900557,
+      "Longitude":174.885971,
+      "Currency":"New Zealand dollar"
+   },
+   {
+      "Country":"Philippines",
+      "Codes":"PHL",
+      "Avg_Trade_per_min":0.005,
+      "Exchange_count":2,
+      "0":"PH",
+      "Latitude":12.879721,
+      "Longitude":121.774017,
+      "Currency":"Philippine peso"
+   },
+   {
+      "Country":"Pakistan",
+      "Codes":"PAK",
+      "Avg_Trade_per_min":0.05,
+      "Exchange_count":1,
+      "0":"PK",
+      "Latitude":30.375321,
+      "Longitude":69.345116,
+      "Currency":"Pakistani rupee"
+   },
+   {
+      "Country":"Poland",
+      "Codes":"POL",
+      "Avg_Trade_per_min":0.534,
+      "Exchange_count":5,
+      "0":"PL",
+      "Latitude":51.919438,
+      "Longitude":19.145136,
+      "Currency":"Polish zloty"
+   },
+   {
+      "Country":"Romania",
+      "Codes":"ROU",
+      "Avg_Trade_per_min":0.02,
+      "Exchange_count":1,
+      "0":"RO",
+      "Latitude":45.943161,
+      "Longitude":24.96676,
+      "Currency":"Romanian leu"
+   },
+   {
+      "Country":"Russia",
+      "Codes":"RUS",
+      "Avg_Trade_per_min":3.155,
+      "Exchange_count":2,
+      "0":"RU",
+      "Latitude":61.52401,
+      "Longitude":105.318756,
+      "Currency":"Russian ruble"
+   },
+   {
+      "Country":"Saudi Arabia",
+      "Codes":"SAU",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"SA",
+      "Latitude":23.885942,
+      "Longitude":45.079162,
+      "Currency":"Saudi Arabian riyal"
+   },
+   {
+      "Country":"Sweden",
+      "Codes":"SWE",
+      "Avg_Trade_per_min":0.15,
+      "Exchange_count":1,
+      "0":"SE",
+      "Latitude":60.128161,
+      "Longitude":18.643501,
+      "Currency":"Swedish krona"
+   },
+   {
+      "Country":"Singapore",
+      "Codes":"SGP",
+      "Avg_Trade_per_min":0.035,
+      "Exchange_count":2,
+      "0":"SG",
+      "Latitude":1.352083,
+      "Longitude":103.819836,
+      "Currency":"Singapore dollar"
+   },
+   {
+      "Country":"Thailand",
+      "Codes":"THA",
+      "Avg_Trade_per_min":0.04,
+      "Exchange_count":1,
+      "0":"TH",
+      "Latitude":15.870032,
+      "Longitude":100.992541,
+      "Currency":"Thai baht"
+   },
+   {
+      "Country":"Turkey",
+      "Codes":"TUR",
+      "Avg_Trade_per_min":0.01,
+      "Exchange_count":1,
+      "0":"TR",
+      "Latitude":38.963745,
+      "Longitude":35.243322,
+      "Currency":"Turkish lira"
+   },
+   {
+      "Country":"Ukraine",
+      "Codes":"UKR",
+      "Avg_Trade_per_min":0.27,
+      "Exchange_count":2,
+      "0":"UA",
+      "Latitude":48.379433,
+      "Longitude":31.16558,
+      "Currency":"Ukrainian hryvnia"
+   },
+   {
+      "Country":"United States",
+      "Codes":"USA",
+      "Avg_Trade_per_min":3.05952381,
+      "Exchange_count":23,
+      "0":"US",
+      "Latitude":37.09024,
+      "Longitude":-95.712891,
+      "Currency":"US Dollar"
+   },
+   {
+      "Country":"Venezuela",
+      "Codes":"VEN",
+      "Avg_Trade_per_min":0.56,
+      "Exchange_count":1,
+      "0":"VE",
+      "Latitude":6.42375,
+      "Longitude":-66.58973,
+      "Currency":"Venezuelan bolivar"
+   },
+   {
+      "Country":"South Africa",
+      "Codes":"ZAF",
+      "Avg_Trade_per_min":0.14,
+      "Exchange_count":1,
+      "0":"ZA",
+      "Latitude":-30.559482,
+      "Longitude":22.937506,
+      "Currency":"South African rand"
+   }
+]

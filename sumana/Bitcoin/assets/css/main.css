@@ -2822,11 +2822,5 @@ body.is-menu-visible #menu {
   height: 100%;
 }
 
-.water {
-    fill: #0000ff;
-}
 
-.land {
-  fill: #d9b38c;
-  stroke: #31322D;
-  stroke-width: 0.7px;
+
