@@ -77,7 +77,7 @@ document.getElementById("bar").innerHTML = "";
             p = Math.log(p);
           }
           return height - y(p); })
-        .style("fill","#460000");
+        .style("fill","#000058");
 
     // add the x Axis
     svg.append("g")
