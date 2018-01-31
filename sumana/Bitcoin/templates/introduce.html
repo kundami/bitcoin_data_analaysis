@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -71,6 +73,44 @@
 						Bitcoin network transactions utilizes blockchain technology as a list of records that are tied to timestamps, transaction data, account type, digital wallets and smart contracts. Digital wallets allow individuals to make electronic transactions purchasing items online and to link to bank accounts as well. Smart contracts allow the performance of credible transactions without third parties, trackable and irreversible.
 
 					</div>
+
+					<div class="content">
+						
+						<h2>Bitcoin Price Indicator</h2>
+						<hr>
+						
+				
+							<div id='open'></div>
+							
+						
+						<div class="row">
+							<div class="col-lg-5">
+							  <div class="input-group">
+								<span class="label label-default">End Date</span>
+								<input type="date" class="form-control" id="start" placeholder="Start Date">
+							  </div>
+							</div>
+							<div class="col-lg-5">
+							  <div class="input-group">
+								<span class="label label-default">Start Date</span>
+								<input type="date" class="form-control" id="end" placeholder="End Date">
+							  </div>
+							</div>
+			
+							<div class="col-lg-2">
+
+								<button type="button" class="btn btn-danger" id="date" >Submit</button>
+							
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-md-12" id="note">
+								<div id='disclaimer'></div>
+							</div>
+						</div>
+						
+					</div>
 				</div>
 			</section>
 
@@ -89,6 +129,7 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/plotly.js"></script>
 
 	</body>
 </html>
