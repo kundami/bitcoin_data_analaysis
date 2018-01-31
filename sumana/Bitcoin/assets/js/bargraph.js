@@ -35,7 +35,7 @@ document.getElementById("bar").innerHTML = "";
             "translate(" + margin.left + "," + margin.top + ")");
 
   // get the data
-  d3.csv("assets/data/d3file.csv", function(error, data) {
+  d3.csv("../assets/data/d3file.csv", function(error, data) {
     if (error) throw error;
 
     // format the data
