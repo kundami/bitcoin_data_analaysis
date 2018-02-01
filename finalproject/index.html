@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Bitcoin Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css>
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../assets/css/leaflet.css" />
+		<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+		<script type='text/javascript' src='../assets/js/leaflet.js'></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<link rel="stylesheet" href="../assets/css/main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" ></script>	 
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">Bitcoin</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#introduction">Introduction </a></li>
+					<li><a href="#trading">Trading Analysis</a></li>
+					<li><a href="#machine">Predicting Model</a></li>
+					<li><a href="#algo">Algorithm Overview </a></li>
+					
+					
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>Bitpirates</h1>
+					<p>
+						Analyzing the impact of Bitcoin market price.
+					</p>
+				</div>
+				<video autoplay loop muted playsinline src="../images/banner.mp4"></video>
+			</section>
+
+		<!-- About us -->
+		
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Introduction to Bitcoin</h2>
+						<h5>Presented By</h5>
+						<hr>
+						<ul style="list-style-type:none">
+							<li><h4><strong>Amitabha Kundu</strong></h4></li>
+							<li><h4><strong>Jamie Jin</strong></h4></li>
+							<li><h4><strong>Luis Flores</strong></h4></li>
+							<li><h4><strong>Sumana Kar</strong></h4></li>
+						</ul>
+					</header>
+
+				</div>
+            </section>
+            
+            <section id="introduction">
+
+            <!-- introduction bitcoin -->
+
+            <!-- Heading -->
+			<div id="heading" >
+				<h1>Bitcoin Exchange across Globe</h1>
+			</div>
+
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+
+						<h2>What is Bitcoin?</h2>
+						<hr>
+
+						<p>Bitcoin is a cryptocurrency digital asset and worldwide payment system, designed to work as a medium of exchange that uses cryptography to secure its transactions, to control the creation of additional units, and to verify the transfer of assets.
+						</p>
+
+					</div>
+					<div class="content">
+						
+						<h2>History of Bitcoin</h2>
+						<hr>
+						<h6>
+							<span>Brief history of Bitcoin and cryptocurrency.</span>
+							
+						</h6>
+						<p>
+							In August 2008, the domain name bitcoin.org was quietly registered online.Two months later, a paper entitled 'Bitcoin: A Peer-to-Peer Electronic Cash System' was passed around a cryptography mailing list.
+							Bitcoin runs through an autonomous software program that is 'mined' by people seeking bitcoin in a lottery-based system.
+							In 2010, a handful of merchants started accepting bitcoin in lieu of established currencies.One of the first tangible items ever purchased with the cryptocurrency was a pizza. Today, the amount of bitcoin used to purchase those pizzas is valued at $100 million. 
+
+						</p>
+
+					</div>
+					<div class="content">
+						
+						<h2>Trading of Bitcoin</h2>
+						<hr>
+						Bitcoin network transactions utilizes blockchain technology as a list of records that are tied to timestamps, transaction data, account type, digital wallets and smart contracts. Digital wallets allow individuals to make electronic transactions purchasing items online and to link to bank accounts as well. Smart contracts allow the performance of credible transactions without third parties, trackable and irreversible.
+
+					</div>
+
+					<div class="content">
+						
+						<h2>Bitcoin Price Indicator</h2>
+						<hr>
+						
+				
+							<div id='open'></div>
+							
+						
+						<div class="row">
+							<div class="col-lg-5">
+							  <div class="input-group">
+								<span class="label label-default">End Date</span>
+								<input type="date" class="form-control" id="start" placeholder="Start Date">
+							  </div>
+							</div>
+							<div class="col-lg-5">
+							  <div class="input-group">
+								<span class="label label-default">Start Date</span>
+								<input type="date" class="form-control" id="end" placeholder="End Date">
+							  </div>
+							</div>
+			
+							<div class="col-lg-2">
+
+								<button type="button" class="btn btn-danger" id="date" >Submit</button>
+							
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-md-12" id="note">
+								<div id='disclaimer'></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+            </section>
+        </section>
+
+        <section id="trading">
+            
+            		<!-- Heading -->
+			<div id="heading" >
+				<h1>Bitcoin Exchange across Globe</h1>
+			</div>
+
+			<!-- trading volume -->
+				<section id="main" class="wrapper">
+
+						<div class="inner">
+		
+				<!-- drop down -->
+							<div class="content">
+								<select id="selectData" onchange='getData(this.value,true)' style="width: 220px;">
+										<option value='volume' selected>Volume of Trade</option>
+										<option value='trade' >Trade per min</option>
+								</select>
+				<!-- Map plotting -->
+								<div id="map" style="height: 640px; border: 1px solid #AAA;"></div>
+		
+							</div>
+				<!-- Bargraph plotting -->
+		
+					<div class="content">
+						<select id="selectData" onchange='getFactor(this.value,true)' style="width: 220px;">
+								<option value='count' selected>Exchange count</option>
+								<option value='volume' >Trade Volume</option>
+								<option value='trade' >Trade per min</option>
+						</select>
+		
+                        <div class="content">
+                                <div id='bar'></div>
+                        </div>
+					
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<section id= "machine">
+
+			<!-- Heading -->
+			<div id="heading" >
+					<h1>BTC Predict Model</h1>
+				</div>
+	
+			<!-- Main -->
+				<section id="main" class="wrapper" >
+					<div class="inner" >
+						<div class="content" style="height:380px;">
+
+								<h1>Placeholder</h1>
+						</div>
+					</div>
+				</section>
+
+
+		</section>
+		
+		<section id="algo">
+
+			<!-- Heading -->
+			<div id="heading" >
+					<h1>Algorithm Overview</h1>
+				</div>
+	
+			<!-- Main -->
+				<section id="main" class="wrapper">
+					<div class="inner">
+						<div class="content">
+	
+							<h2>Defining the timeseries analysis Problem ?</h2>
+							<hr>
+	
+							<p>Imagine a girl moving randomly on a giant chess board. In this case, next position of the girl is only dependent on the last position</p>
+							<img src="../images/RandomWalk.gif" alt="Random Walk">
+							<p>You want to predict the position of the girl with time sitting in another room and not being able to see the girl</p> 
+						</div>
+						<div class="content">
+							
+							<h2>Algorithms Reviewed and Implemented</h2>
+							<hr>
+							<ol type="1">
+								  <li>Linear Regression</li>
+								  <li>ARIMA</li>
+								  <li>Facebook Prophet</li>
+								  <li>RNN using LSTM (Tensorflow  + Keras)</li>
+							</ol>
+							
+							<p>
+							<i>"All models are wrong, some are useful.</i>"- GEORGE E BOX, British statistician
+							</p>	
+						</div>
+						<div class="content">
+							
+							<h2><b>ARIMA</b></h2>
+							<hr>
+							<img src="../images/ARIMA.png" alt="Arima Walk">
+							<p>	
+							<ul>
+							<li><b>AR</b>- Auto Regression - Degree to which the variable coorelates to itself (p - period) </li>
+							<li><B>I</B>- Degree of difference on the data to make the data stationary. Degree 1 replace D(I) = D(I) - D(I-1) )</li>
+							<li><b>MA</b>- Moving Average on a  series where you average within a predefined time window. q = 9 for 9 day MA</li>
+							</ul>
+							</p>	
+							
+						</div>
+						<div class="content">
+							<h2><b>FaceBook - Prophet</b></h2>
+							<hr>
+							<img src="../images/prophet.jpg" alt="Prophet Walk">
+							<br>
+							<h3><u><b>How Prophet works</b></u></h3>
+							<p>At its core, the Prophet procedure is an additive regression model with four main components:
+							<ul>
+							<li>A piecewise linear or logistic growth curve trend. Prophet automatically detects changes in trends by selecting changepoints from the data.</li>
+							<li>A yearly seasonal component modeled using Fourier series.</li>
+							<li>A weekly seasonal component using dummy variables.</li>
+							<li>user-provided list of important holidays.</li>
+							</ul>
+		
+							</p>	
+						   </div>
+	
+						   <div class="content">
+							<h2><b>RNN using LSTM (Tensorflow  + Keras)</b></h2>
+							<hr>
+							<img src="../images/tensorFlow.jpg" alt="Tensorflow Walk">
+							
+							   <h3><b><u>Recurrent Neural Network (RNN)</u></b></h3> <p>Allows you to connect previous information to the present frame.</p> 
+							<ul>
+							<li><b>Long Short Term Memory networks</b> usually just called “LSTMs” – are a special kind of RNN, capable of learning long-term dependencies.</li>
+							<li>We define the Time Series problem as 3 dimensional Input vector to the RNN network </li>
+							<li>X{ Open(T-1), Close(T-1), High(T-1), Low(T-1), volume(T-1)...etc}, TimeStep { 1 day },Y{Closing Price(T)}. </li>
+							<li>Model.fit(train_X, train_y, epochs=50, batch_size=72, validation_data=(test_X, test_y), verbose=2, shuffle=False</li>
+							</ul>
+							
+						
+						   </div>
+					</div>
+				</section>
+
+
+		</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+					<div class="copyright">
+							<p> @ Rutgers 2018 Final Project on Bitcoin</p>
+					</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/plotly.js"></script>
+			<script type='text/javascript' src='../assets/data/volumetrade_geoeuro.json'></script>
+			<script type='text/javascript' src='../assets/data/avgtrade_geoeuro.json'></script>
+      		<script type='text/javascript' src='../assets/data/volume.json'></script>
+			<script type='text/javascript' src='../assets/data/trade.json'></script> 
+			<script type='text/javascript' src='../assets/js/map.js'></script>
+			<script type='text/javascript' src='../assets/js/bargraph.js'></script>
+
+	</body>
+</html>

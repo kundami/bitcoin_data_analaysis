@@ -1,0 +1,41 @@
+Country,Codes,Avg_Trade_per_min,Exchange_count,Latitude,Longitude,Currency
+Japan,JPN,8.30,3,36.204824,138.252924,Japanese yen
+Indonesia,IDN,4.93,1,-0.789275,113.921327,Indonesian rupiah
+Russia,RUS,3.16,2,61.52401,105.318756,Russian ruble
+United States,USA,3.06,23,37.09024,-95.712891,US Dollar
+China,CHN,1.90,5,35.86166,104.195397,Chinese Yuan Renminbi
+European Union,BEL,1.74,19,50.503887,4.469936,Euro
+United Kingdom,GBR,1.08,5,55.378051,-3.435973,Pound sterling
+Brazil,BRA,0.87,2,-14.235004,-51.92528,Brazilian real
+Mexico,MEX,0.75,2,23.634501,-102.552784,Mexican peso
+Venezuela,VEN,0.56,1,6.42375,-66.58973,Venezuelan bolivar
+Poland,POL,0.53,5,51.919438,19.145136,Polish zloty
+Australia,AUS,0.51,2,-25.274398,133.775136,Australian dollar
+Ukraine,UKR,0.27,2,48.379433,31.16558,Ukrainian hryvnia
+Canada,CAN,0.23,6,56.130366,-106.346771,Canadian dollar
+India,IND,0.15,1,20.593684,78.96288,Indian rupee
+Sweden,SWE,0.15,1,60.128161,18.643501,Swedish krona
+South Africa,ZAF,0.14,1,-30.559482,22.937506,South African rand
+Kenya,KEN,0.10,1,-0.023559,37.906193,Kenyan shilling
+Hong Kong,HKG,0.09,2,22.396428,114.109497,Hong Kong Dollar
+Colombia,COL,0.06,1,4.570868,-74.297333,Colombian peso
+Malaysia,MYS,0.05,1,4.210484,101.975766,Malaysian ringgit
+Pakistan,PAK,0.05,1,30.375321,69.345116,Pakistani rupee
+New Zealand,NZL,0.04,1,-40.900557,174.885971,New Zealand dollar
+Thailand,THA,0.04,1,15.870032,100.992541,Thai baht
+Singapore,SGP,0.04,2,1.352083,103.819836,Singapore dollar
+Argentina,ARG,0.02,1,-38.416097,-63.616672,Argentine peso
+Chile,CHL,0.02,1,-35.675147,-71.542969,Chilean peso
+Israel,ISR,0.02,1,31.046051,34.851612,Israeli new shekel
+Romania,ROU,0.02,1,45.943161,24.96676,Romanian leu
+Norway,NOR,0.02,2,60.472024,8.468946,Norwegian krone
+United Arab Emirates,ARE,0.01,1,23.424076,53.847818,UAE dirham
+Switzerland,CHE,0.01,1,46.818188,8.227512,Swiss franc
+Czech Republic,CZE,0.01,1,49.817492,15.472962,Czech koruna
+Denmark,DNK,0.01,1,56.26392,9.501785,Danish krone
+Croatia,HRV,0.01,1,45.1,15.2,Croatian kuna
+Iran,IRN,0.01,1,32.427908,53.688046,Iranian rial
+Saudi Arabia,SAU,0.01,1,23.885942,45.079162,Saudi Arabian riyal
+Turkey,TUR,0.01,1,38.963745,35.243322,Turkish lira
+Philippines,PHL,0.01,2,12.879721,121.774017,Philippine peso
+Hungary,HUN,0.00,1,47.162494,19.503304,Hungarian forint
