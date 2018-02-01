@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import quandl
-from datetime import datetime
+import datetime
 from dateutil.parser import parse
 from itertools import chain
 import operator
@@ -25,6 +25,7 @@ import plotly
 import plotly.offline as py
 import plotly.graph_objs as go
 import plotly.figure_factory as ff
+from fbprophet import Prophet
 py.init_notebook_mode(connected=True)
 
 from flask import Flask, render_template, request, jsonify
@@ -80,24 +81,58 @@ def plot(actual,predict,real_data,columns,title):
     )
     data = [trace1, trace2]
     layout = go.Layout(
-        title='Actual Vs Predicted using Google TensorFlow RNN',
+        title='Actual vs Predicted Using Google TensorFlow RNN',
         yaxis=dict(
             title='Closing Price'
         ),
-        yaxis2=dict(
-            title='yaxis2 title',
-            titlefont=dict(
-                color='rgb(148, 103, 189)'
-            ),
-            tickfont=dict(
-                color='rgb(148, 103, 189)'
-            ),
-            overlaying='y',
-            side='right'
-        )
     )
     graph = go.Figure(data=data, layout=layout)
     return graph
+
+def plot_fb(df,X,future,columns,title):
+
+# lot_data(predicted, actual, future, cols,title)
+    trace1 = go.Scatter(
+        x=future['ds'],
+        y=X,
+        name='Actual Close'
+    )
+    #Lower_closing  Upper_closing
+    trace2 = go.Scatter(
+        x=future['ds'],
+        y=df['Upper_closing'],
+        name='Predicted Close Upper Bound',
+        fill=None,
+        mode='lines',
+        line=dict(color='rgb(143,19,131)'),        
+       
+    )
+    trace3 = go.Scatter(
+        x=future['ds'],
+        y=df['Lower_closing'],
+        name='Predicted Close Lower Bound',
+        fill='tonexty',
+        mode='lines',
+        line=dict(color='rgb(143,19,131)')
+    )
+
+    data = [trace1, trace2, trace3]
+    layout = go.Layout(
+        title='Actual Vs Predicted using FBProphet',
+        yaxis=dict(
+            title='Closing Price'
+        )
+    )
+    fig = go.Figure(data=data, layout=layout)
+    return fig
+
+# date_string = YYYY-MM-DD
+def date_parse(date_string):
+    date_list = date_string.split('-')
+    date_index_0 = datetime.date(2016, 1, 1)
+    date = datetime.date(int(date_list[0]),int(date_list[1]),int(date_list[2]))
+    diff = date - date_index_0
+    return diff.days
 
 btc_data = pd.read_csv("data_final.csv")
 btc_data.set_index('Date', inplace=True)
@@ -105,9 +140,11 @@ btc_data.set_index('Date', inplace=True)
 @app.route('/', methods = ["GET", "POST"])
 def test():
     btc_data_new = btc_data
-
+    date_index = 639
     if flask.request.method == 'POST':
         test_list = request.form.getlist("chk_box")
+        date_index = date_parse(request.form.get('date'))
+        print(date_index)
         print(test_list)
         btc_data_new = btc_data_new[test_list]
         
@@ -157,14 +194,35 @@ def test():
 
     cols = ["Mean", "Lower_closing", "Upper_closing"]
     title = "Closing price distribution of bitcoin"
-    real_data = btc_data_new[651:len(btc_data_new)]
+    real_data = btc_data_new[date_index:len(btc_data_new)]
     print(real_data.columns.values)
+
+
+    btc_data_fb = btc_data
+    btc_data_fb['y'] = np.log(btc_data_fb['close'])
+    btc_data_fb['ds'] = btc_data_fb.index
+    fb_reg_data = btc_data_fb.loc[:,['ds','y']]
+    fb_reg_data = fb_reg_data.reset_index(drop=True)
+    fb_reg_data.dropna(inplace=True)
+    # from 10/1/2017
+    fb_reg_data_new = fb_reg_data[date_index:]
+
+    m = Prophet(changepoint_prior_scale = 0.5)
+    m.fit(fb_reg_data_new)
+    # predict till 1/3/2018 from end of data 12/31/2017
+    future = m.make_future_dataframe(periods=3)
+    forecast = m.predict(future)
+    predicted  = forecast[['yhat', 'yhat_lower', 'yhat_upper']].applymap(np.exp)
+    cols = ["Mean", "Lower_closing", "Upper_closing"]
+    predicted.columns = cols
+    actual = np.exp(fb_reg_data_new["y"])
+    actual.name = "Actual"
+    title = "Closing Price Distribution of Bitcoin"
 
     # Convert the figures to JSON
     graphJSON = json.dumps(plot(inv_y,inv_yhat, real_data, cols ,title), cls=plotly.utils.PlotlyJSONEncoder)
-    return render_template('test.html', graphJSON=graphJSON)
-
-    # return jsonify(test_list)
+    graphJSON_fb = json.dumps(plot_fb(predicted, actual, future, cols,title), cls=plotly.utils.PlotlyJSONEncoder)
+    return render_template('test.html', graphJSON=graphJSON, graphJSON_fb=graphJSON_fb)
 
 if __name__ == '__main__':
     app.run(debug=True)
