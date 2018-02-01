@@ -116,7 +116,7 @@ document.getElementById("bar").innerHTML = "";
       .attr('text-anchor', 'middle')
       .style("font-size","28px")
       .attr('class', 'chart-title')
-      .text("Top 20 Countries by"+name);
+      .text("Top 20 Countries by "+name);
 
   });
 }
