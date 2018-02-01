@@ -2821,6 +2821,12 @@ body.is-menu-visible #menu {
 .map {
   height: 100%;
 }
+#note{
+
+  margin: 20px;
+  padding: 10px;
+  font-size: 10px;
+}
 
 
 
