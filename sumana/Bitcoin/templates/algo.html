@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Bitcoin Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">Bitcoin</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="introduce.html">Introduction </a></li>
+					<li><a href="tradingvolume.html">Trading Analysis</a></li>
+					<li><a href="generic.html">Predictive Analysis</a></li>
+					<li><a href="algo.html">Algorithm Overview</a></li>
+					
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>Algorithm Overview</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+
+						<h2>Defining the timeseries analysis Problem ?</h2>
+						<hr>
+
+						<p>Imagine a girl moving randomly on a giant chess board. In this case, next position of the girl is only dependent on the last position</p>
+                        <img src="../images/RandomWalk.gif" alt="Random Walk">
+                        <p>You want to predict the position of the girl with time sitting in another room and not being able to see the girl</p> 
+					</div>
+					<div class="content">
+						
+						<h2>Algorithms Reviewed and Implemented</h2>
+						<hr>
+						<ul>
+  							<li><h3><em><b>Linear Regression</b></em></h3></li>
+ 							<li><h3><em><b>ARIMA</b></em></h3></li>
+  							<li><h3><em><b>Facebook Prophet</b></em></h3></li>
+  							<li><h3><em><b>RNN using LSTM (Tensorflow  + Keras)</b></em></h3></li>
+						</ul>
+						
+						<p>
+						<h4><em><b>"All models are wrong, some are useful."</b></em></h4>
+                                         <h4><en><b>GEORGE E BOX, British statistician</b></en></h4>
+						</p>
+						
+					</div>
+					<div class="content">
+						
+						<h2><b>ARIMA</b></h2>
+						<hr>
+						<img src="../images/ARIMA.png" alt="Arima Walk">
+						<p>	
+						<ul>
+						<li><h3><b>AR</b>- Auto Regression - Degree to which the variable coorelates to itself (p - period) </h3></li>
+						<li><h3><B>I</B>- Degree of difference on the data to make the data stationary. Degree 1 replace D(I) = D(I) - D(I-1) )</h3> </li>
+						<li><h3><b>MA</b>- Moving Average on a  series where you average within a predefined time window. q = 9 for 9 day MA</h3></li>
+						</ul>
+						</p>	
+                        
+			    	</div>
+			    	<div class="content">
+						<h2><b>faceBook - Prophet</b></h2>
+						<hr>
+						<img src="../images/Prophet.png" alt="Prophet Walk">
+						<p>	
+                        <h3><b>How Prophet works</b>
+						<h3>At its core, the Prophet procedure is an additive regression model with four main components:</h3>
+						<ul>
+						<li><h3>A piecewise linear or logistic growth curve trend. Prophet automatically detects changes in trends by selecting changepoints from the data.<h3></li>
+                        <li><h3>A yearly seasonal component modeled using Fourier series.<h3></li>
+						<li><h3>A weekly seasonal component using dummy variables.<h3></li>
+						<li><h3> user-provided list of important holidays.<h3></li>
+						</ul>
+						<h3>
+						</p>	
+                   	</div>
+
+                   	<div class="content">
+						<h2><b>RNN using LSTM (Tensorflow  + Keras)</b></h2>
+						<hr>
+						<img src="../images/Tensorflow.png" alt="Tensorflow Walk">
+						<p>	
+                       	<h3><b>Recuurent</b> NN allows you to connect previous information to the prsent frame</h3>
+						<ul>
+						<li><h3><b>Long Short Term Memory networks</b> usually just called “LSTMs” – are a special kind of RNN, capable of learning long-term dependencies.<h3></li>
+                        <li><h3>We define the Time Series problem as 3 dimensional Input vector to the RNN network <h3></li>
+						<li><h3>X{ Open(T-1), Close(T-1), High(T-1), Low(T-1), volume(T-1)...etc}, TimeStep { 1 day },Y{Closing Price(T)}.For ex. <h3></li>
+						<li><h3> model.fit(train_X, train_y, epochs=50, batch_size=72, validation_data=(test_X, test_y), verbose=2, shuffle=False<h3></li>
+						</ul>
+						<h3>
+						</p>	
+                   	</div>
+				</div>
+			</section>
+
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="copyright">
+					<p> @ Rutgers 2018 Final Project on Bitcoin</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
