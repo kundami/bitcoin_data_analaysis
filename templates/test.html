@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BTC Predict Model</title>
+</head>
+
+<body>
+    <h3>Variables</h3>
+    <form action="/" method="POST">
+        
+        <input type="checkbox" name="chk_box" value='open' checked>Open
+        <input type="checkbox" name="chk_box" value='high' checked>High
+        <input type="checkbox" name="chk_box" value='low' checked>Low
+        <input type="checkbox" name="chk_box" value='close' checked onclick="return false;">Close
+        <input type="checkbox" name="chk_box" value='weighted_price' checked>Weighted Price
+        <input type="checkbox" name="chk_box" value='high_low_spread' checked>High Low Spread
+        
+        <br><br>
+
+        <input type="checkbox" name="chk_box" value='midquote_price' checked>Midquote Price
+        <input type="checkbox" name="chk_box" value='effective_spread' checked>Effective Spread
+        <input type="checkbox" name="chk_box" value='7_trailing' checked>7 Days Trailing Price
+        <input type="checkbox" name="chk_box" value='7_next_trailing' checked>Next 7 Days Trailing Price
+        <input type="checkbox" name="chk_box" value='volume_btc' checked>Volume (BTC)
+        <input type="checkbox" name="chk_box" value='volume_currency' checked>Volume (Currency)
+        
+        <br><br>
+        
+        <input id="date" type="date" name="date" value="2017-10-01" min="2016-01-01" max="2017-12-31">
+        
+        <br><br>
+
+        <input type="submit" value="submit">
+    </form>
+
+    <h3>RNN Model</h3>
+    <div id="graph-0"></div>
+    <br><br>
+    <h3>Facebook Prophet Model</h3>
+    <div id="graph-1"></div>
+
+</body>
+
+
+<footer>
+    <!-- D3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+
+    <script type="text/javascript">
+        var graph = {{graphJSON | safe}};
+        var graph_fb = {{graphJSON_fb | safe}};
+        Plotly.plot("graph-0", graph.data, graph.layout);
+        Plotly.plot("graph-1", graph_fb.data, graph_fb.layout);
+    </script>
+</footer>
+
+</html>
